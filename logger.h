@@ -5,13 +5,22 @@
 #include <fstream>
 #include <iomanip>
 #include <string>
+#include <sstream>
 
 class Logger
 {
 public:
     Logger();
-    void logMSG();
-    void logErr(const std::string& msg);
+    void logMsg(const std::string &msg);
+    void logErr(const std::string &msg);
+
+private:
+    /// @brief function to return current time in log desired format
+    /// @return string current time in format "%Y-%m-%d %H:%M:%S"
+    std::string getTime();
+
+    //Config
+    static constexpr const char* filePath_ = "./log.csv";
 };
 
 #endif
