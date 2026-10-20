@@ -20,7 +20,7 @@ private:
     std::string getTime();
 
     //Config
-    static constexpr const char* filePath_ = "./log.csv";
+    static constexpr char* filePath_ = "./log.csv";
 };
 
 #endif
